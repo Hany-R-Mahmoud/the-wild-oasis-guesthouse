@@ -1,0 +1,60 @@
+import styled from "styled-components";
+import Tag from "../../ui/Tag";
+import Button from "../../ui/Button";
+import { Flag } from "../../ui/Flag";
+import CheckoutButton from "./CheckoutButton";
+
+const StyledTodayItem = styled.li`
+  display: grid;
+  /* grid-template-columns: 9rem 2rem 1fr 7rem 9rem; */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+  @media (max-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  /* 
+  flex-wrap: wrap; */
+  /* flex-grow: 1; */
+  /* */
+  /* align-items: center; */
+
+  font-size: 2.4rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--color-grey-100);
+
+  &:first-child {
+    border-top: 1px solid var(--color-grey-100);
+  }
+`;
+
+const Guest = styled.div`
+  font-weight: 500;
+`;
+
+function TodayItem({ activity }) {
+  const { id, status, guests, numNights } = activity;
+
+  return (
+    <StyledTodayItem>
+      {status === "unconfirmed" && <Tag type="green">Arriving</Tag>}
+      {status === "checked-in" && <Tag type="blue">Departing</Tag>}
+
+      <Flag src={guests.countryFlag} alt={`Flag of ${guests.country}`} />
+      <Guest>{guests.fullName}</Guest>
+      <div>{numNights}</div>
+
+      {status === "unconfirmed" && (
+        <Button size="small" variation="primary" as="a" href={`/checkin/${id}`}>
+          Check in
+        </Button>
+      )}
+      {status === "checked-in" && <CheckoutButton id={id}></CheckoutButton>}
+    </StyledTodayItem>
+  );
+}
+
+export default TodayItem;

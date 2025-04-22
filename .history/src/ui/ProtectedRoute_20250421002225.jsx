@@ -1,0 +1,15 @@
+import { useUser } from "../features/authentication/useUser";
+
+function ProtectedRoute({ children }) {
+  // 1- load authenticated user
+  const { user, isLoading } = useUser();
+
+  // 2-show spinner
+
+  // 3- if no authenticated user,redirect to /login
+
+  // 4- if there is a user, render the app
+  return children;
+}
+
+export default ProtectedRoute;
