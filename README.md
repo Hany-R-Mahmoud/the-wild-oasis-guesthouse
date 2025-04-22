@@ -80,7 +80,7 @@ Get up and running with The Wild Oasis in a few simple steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/the-wild-oasis.git](https://github.com/your-username/the-wild-oasis.git)
+    git clone [https://github.com/Hany-R-Mahmoud/the-wild-oasis.git](https://github.com/Hany-R-Mahmoud/the-wild-oasis.git)
     ```
 2.  **Install dependencies:**
     ```bash
@@ -104,7 +104,7 @@ Get up and running with The Wild Oasis in a few simple steps:
 
 Your contributions are highly valued! Here's how you can get involved:
 
-1.  **Fork the repository:** Visit https://github.com/your-username/the-wild-oasis.git and click the "Fork" button.
+1.  **Fork the repository:** Visit https://github.com/Hany-R-Mahmoud/the-wild-oasis.git and click the "Fork" button.
 2.  **Create a new branch:**
     ```bash
     git checkout -b feature/new-feature
