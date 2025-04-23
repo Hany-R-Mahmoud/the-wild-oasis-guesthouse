@@ -49,12 +49,8 @@ const Amount = styled.div`
   font-weight: 500;
 `;
 
-function BookingRow({ booking }) {
-  const navigate = useNavigate();
-  const { checkout, isCheckingOut } = useCheckout();
-  const { deleteBooking, isDeleting } = useDeleteBooking();
-
-  const {
+function BookingRow({
+  booking: {
     id: bookingId,
     created_at,
     startDate,
@@ -65,7 +61,11 @@ function BookingRow({ booking }) {
     status,
     guests: { fullName: guestName, email },
     cabins: { name: cabinName },
-  } = booking;
+  },
+}) {
+  const navigate = useNavigate();
+  const { checkout, isCheckingOut } = useCheckout();
+  const { deleteBooking, isDeleting } = useDeleteBooking();
 
   const statusToTagName = {
     unconfirmed: "blue",

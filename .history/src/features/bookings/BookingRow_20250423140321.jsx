@@ -146,7 +146,7 @@ function BookingRow({ booking }) {
         </Menus.Menu>
 
         <Modal.Window name="edit-form">
-          <CreateBookingForm bookingToEdit={booking} />
+          <CreateBookingForm bookingToEdit={bookingId} />
         </Modal.Window>
 
         <Modal.Window name="delete">

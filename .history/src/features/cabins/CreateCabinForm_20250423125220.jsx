@@ -52,12 +52,16 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
       );
   }
 
+  // function onError(errors) {
+  //   // console.log(errors);
+  // }
+
   return (
     <Form
       onSubmit={handleSubmit(onSubmit)}
       type={onCloseModal ? "modal" : "regular"}
     >
-      <FormRow label="Cabin name" error={errors?.name?.message}>
+      {/*    <FormRow label="Cabin name" error={errors?.name?.message}>
         <Input
           type="text"
           id="name"
@@ -67,6 +71,23 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           })}
           autoComplete="off"
         />
+      </FormRow> */}
+      <FormRow label="Cabin name" error={errors?.name?.message}>
+        <select name="pets" id="pet-select">
+          <option value="">--Please choose an option--</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="hamster">Hamster</option>
+        </select>
+        {/* <Input
+          type="text"
+          id="name"
+          disabled={isWorking}
+          {...register("name", {
+            required: "This field is required",
+          })}
+          autoComplete="off"
+        /> */}
       </FormRow>
 
       <FormRow label="Maximum capacity" error={errors?.maxCapacity?.message}>

@@ -7,23 +7,21 @@ import FileInput from "../../ui/FileInput";
 import Textarea from "../../ui/Textarea";
 import FormRow from "../../ui/FormRow";
 
-import { useCreateCabin } from "./useCreateCabin";
-import { useEditCabin } from "./useEditCabin";
+// import { useCreateCabin } from "./useCreateCabin";
+// import { useEditCabin } from "./useEditCabin";
 
-function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
-  const { id: editId, ...editValues } = cabinToEdit;
-
+function CreateBookingForm({ BookingToEdit = {}, onCloseModal }) {
+  const { id: editId, ...editValues } = BookingToEdit;
   const isEditSession = Boolean(editId);
 
   const { register, handleSubmit, reset, getValues, formState } = useForm({
     defaultValues: isEditSession ? editValues : {},
   });
   const { errors } = formState;
-  // console.log(errors);
 
-  const { isCreating, createCabin } = useCreateCabin();
+  const { isCreating, createBooking } = useCreateBooking();
 
-  const { isEditing, editCabin } = useEditCabin();
+  const { isEditing, editBooking } = useEditBooking();
 
   const isWorking = isCreating || isEditing;
 
@@ -52,6 +50,10 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
       );
   }
 
+  // function onError(errors) {
+  //   // console.log(errors);
+  // }
+
   return (
     <Form
       onSubmit={handleSubmit(onSubmit)}
@@ -69,7 +71,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
         />
       </FormRow>
 
-      <FormRow label="Maximum capacity" error={errors?.maxCapacity?.message}>
+      <FormRow label="Nummber of nights" error={errors?.maxCapacity?.message}>
         <Input
           type="number"
           id="maxCapacity"

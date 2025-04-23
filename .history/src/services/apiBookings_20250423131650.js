@@ -137,7 +137,7 @@ export async function deleteBooking(id) {
   return data;
 }
 
-export async function createEditBooking(newBooking, id) {
+export async function createEditBooking({ newBooking, id }) {
   // 1- create/edit cabin
   let query = supabase.from("bookings");
 

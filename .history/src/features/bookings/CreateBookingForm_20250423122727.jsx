@@ -52,6 +52,10 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
       );
   }
 
+  // function onError(errors) {
+  //   // console.log(errors);
+  // }
+
   return (
     <Form
       onSubmit={handleSubmit(onSubmit)}

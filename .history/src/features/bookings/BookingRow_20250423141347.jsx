@@ -53,7 +53,7 @@ function BookingRow({ booking }) {
   const navigate = useNavigate();
   const { checkout, isCheckingOut } = useCheckout();
   const { deleteBooking, isDeleting } = useDeleteBooking();
-
+  console.log(booking);
   const {
     id: bookingId,
     created_at,

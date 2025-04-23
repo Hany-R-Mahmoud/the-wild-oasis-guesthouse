@@ -11,7 +11,6 @@ import {
   HiArrowDownOnSquare,
   HiArrowUpOnSquare,
   HiEye,
-  HiPencil,
   HiTrash,
 } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +19,6 @@ import Modal from "../../ui/Modal";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 import { useDeleteBooking } from "./useDeleteBooking";
 import Spinner from "../../ui/Spinner";
-import CreateBookingForm from "./CreateBookingForm";
 
 const Cabin = styled.div`
   font-size: 1.6rem;
@@ -49,12 +47,8 @@ const Amount = styled.div`
   font-weight: 500;
 `;
 
-function BookingRow({ booking }) {
-  const navigate = useNavigate();
-  const { checkout, isCheckingOut } = useCheckout();
-  const { deleteBooking, isDeleting } = useDeleteBooking();
-
-  const {
+function BookingRow({
+  booking: {
     id: bookingId,
     created_at,
     startDate,
@@ -65,7 +59,11 @@ function BookingRow({ booking }) {
     status,
     guests: { fullName: guestName, email },
     cabins: { name: cabinName },
-  } = booking;
+  },
+}) {
+  const navigate = useNavigate();
+  const { checkout, isCheckingOut } = useCheckout();
+  const { deleteBooking, isDeleting } = useDeleteBooking();
 
   const statusToTagName = {
     unconfirmed: "blue",
