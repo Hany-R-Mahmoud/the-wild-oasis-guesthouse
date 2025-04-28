@@ -2,36 +2,33 @@ import DashboardLayout from "../features/dashboard/DashboardLayout";
 import Heading from "../ui/Heading";
 import Row from "../ui/Row";
 import DashboardFilter from "../features/dashboard/DashboardFilter";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const DashboardRow = styled.div`
   display: flex;
-  flex-direction: column;
-  /* 
-  @media (max-width: 64rem) {
-    flex-direction: column;
-  } */
+
   ${(props) =>
     props.type === "horizontal" &&
     css`
       justify-content: space-between;
       align-items: center;
     `}
+
   ${(props) =>
     props.type === "vertical" &&
     css`
       flex-direction: column;
       gap: 1.6rem;
-    `};
+    `}
 `;
 
 function Dashboard() {
   return (
     <>
-      <DashboardRow type="horizontal">
+      <Row type="horizontal">
         <Heading as="h1">Dashboard</Heading>
         <DashboardFilter />
-      </DashboardRow>
+      </Row>
       <DashboardLayout />
     </>
   );

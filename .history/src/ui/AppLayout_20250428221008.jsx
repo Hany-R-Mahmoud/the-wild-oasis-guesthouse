@@ -41,6 +41,29 @@ const Container = styled.div`
   gap: 3.2rem;
 `;
 
+/* 
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width:992xpx) {
+    .container {
+        width: 950px;
+    }
+}
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+*/
 // const StyledAppLayout = styled.div`
 //   display: grid;
 //   grid-template-columns: 240px 1fr;

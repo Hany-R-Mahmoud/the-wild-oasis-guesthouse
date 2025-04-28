@@ -8,7 +8,7 @@ const StyledAppLayout = styled.div`
   grid-template-columns: 30% 70%;
   grid-template-rows: auto 1fr;
   height: 100dvh;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 
   @media (min-width: 40rem) {
     width: 39rem;

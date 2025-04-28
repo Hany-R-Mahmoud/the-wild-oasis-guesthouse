@@ -6,23 +6,23 @@ import styled, { css } from "styled-components";
 
 const DashboardRow = styled.div`
   display: flex;
-  flex-direction: column;
-  /* 
+  flex-direction: column
+    /* 
   @media (max-width: 64rem) {
     flex-direction: column;
   } */
-  ${(props) =>
-    props.type === "horizontal" &&
-    css`
-      justify-content: space-between;
-      align-items: center;
-    `}
-  ${(props) =>
-    props.type === "vertical" &&
-    css`
-      flex-direction: column;
-      gap: 1.6rem;
-    `};
+    ${(props) =>
+      props.type === "horizontal" &&
+      css`
+        justify-content: space-between;
+        align-items: center;
+      `}
+    ${(props) =>
+      props.type === "vertical" &&
+      css`
+        flex-direction: column;
+        gap: 1.6rem;
+      `};
 `;
 
 function Dashboard() {

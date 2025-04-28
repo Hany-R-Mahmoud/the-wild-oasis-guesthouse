@@ -5,25 +5,19 @@ import styled from "styled-components";
 
 const StyledAppLayout = styled.div`
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 26rem 1fr;
   grid-template-rows: auto 1fr;
   height: 100dvh;
   margin: 0 auto;
 
-  @media (min-width: 40rem) {
-    width: 39rem;
+  @media (min-width: 768px) {
+    width: 750px;
   }
-  @media (min-width: 48rem) {
-    width: 47rem;
+  @media (min-width: 992xpx) {
+    width: 950px;
   }
-  @media (min-width: 64rem) {
-    width: 63rem;
-  }
-  @media (min-width: 80rem) {
-    width: 79rem;
-  }
-  @media (min-width: 96rem) {
-    width: 95rem;
+  @media (min-width: 1200px) {
+    width: 1170px;
   }
 `;
 
@@ -41,6 +35,29 @@ const Container = styled.div`
   gap: 3.2rem;
 `;
 
+/* 
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width:992xpx) {
+    .container {
+        width: 950px;
+    }
+}
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+*/
 // const StyledAppLayout = styled.div`
 //   display: grid;
 //   grid-template-columns: 240px 1fr;

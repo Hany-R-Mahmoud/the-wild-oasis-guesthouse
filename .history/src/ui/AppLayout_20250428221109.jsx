@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const StyledAppLayout = styled.div`
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 20% 80%;
   grid-template-rows: auto 1fr;
   height: 100dvh;
   margin: 0 auto;
@@ -41,6 +41,29 @@ const Container = styled.div`
   gap: 3.2rem;
 `;
 
+/* 
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width:992xpx) {
+    .container {
+        width: 950px;
+    }
+}
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+*/
 // const StyledAppLayout = styled.div`
 //   display: grid;
 //   grid-template-columns: 240px 1fr;
