@@ -23,6 +23,13 @@ const Guest = styled.div`
   font-weight: 500;
 `;
 
+const Guest = styled.div`
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
 function TodayItem({ activity }) {
   const { id, status, guests, numNights } = activity;
 

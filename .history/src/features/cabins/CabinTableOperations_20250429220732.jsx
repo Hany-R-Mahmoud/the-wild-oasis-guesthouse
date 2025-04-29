@@ -1,4 +1,6 @@
 import TableOperations from "../../ui/TableOperations";
+import styled from "styled-components";
+
 import Filter from "../../ui/Filter";
 import SortBy from "../../ui/SortBy";
 
